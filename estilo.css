@@ -1,0 +1,30 @@
+
+
+body{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.verm{
+    background-color: red;
+}
+
+.verd{
+    background-color: green;
+}
+
+
+.azul{
+    background-color: blue;
+}

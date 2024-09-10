@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Muda Cor</title>
+    <link rel='stylesheet' href='estilo.css'>
+</head>
+<body>
+    <div class="box verm" onclick="mudacor('red');"></div>
+    <div class="box verd" onclick="mudacor('green');"></div>
+    <div class="box azul" onclick="mudacor('blue');"></div>
+    
+    <script>
+        function mudacor(color){
+            document.getElementsByTagName("BODY")[0].style.backgroundColor=color;
+        }
+    </script>
+</body>
+</html>

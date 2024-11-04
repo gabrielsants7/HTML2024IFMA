@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos com JavaScript</title>
+    <style>
+        #messageBox {
+            width: 200px;
+            height: 100px;
+            border: 1px solid black;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button id="clickButton">Cliqe aqui</button>
+        <br><br>
+        <input type="text" id="inputBox" placeholder="Digite algo">
+        <div id="messageBox"></div>
+    
+        <script>
+            document.getElementById('clickButton').addEventListener('click', function(){ document.getElementById('messageBox').innerText = "Você clicou no botão!";
+        });
+            document.getElementById('inputBox').addEventListener('input', function() { let inputText = document.getElementById('inputBox').value; document.getElementById('messageBox').innerText = inputText; 
+            });
+            
+            document.getElementById('messageBox').addEventListener('mousemove', function(){
+                this.style.backgroundColor = `rgb(${Math.random()*255}, ${Math.random() *255}, ${Math.random() *255})`
+            })
+        </script>
+</body>
+</html>

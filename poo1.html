@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  href="bootstrap.min.css"  rel="stylesheet"> 
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Estudante(nome, casa, animal, localAtual){
+            this.nome = nome;
+            this.casa = casa;
+            this.animal = animal;
+            this.localAtual = localAtual;
+        }
+       var alunos = [];
+
+       alunos[0] = new Estudante("Cristiano Ronaldo", "Portugal", "cachorro", "Arábia");
+       alunos[1] = new Estudante("Messi", "Argentina", "gato", "EUA");
+       alunos[2] = new Estudante("Neymar","Brasil", "boi", "Arábia");
+       alunos[3] = new Estudante("Brahim","Marrocos", "guepardo", "Espanha");
+       alunos[4] = new Estudante("Kante","França", "preguiça", "Inglaterra");
+       alunos[5] = new Estudante("Arrascaeta","Uruguai", "leopardo", "RJ");
+       alunos[6] = new Estudante("Vidal","Chile", "mamute", "RJ");
+
+        function listar(casa){
+            var i;
+            var divcasa = document.getElementById('listaralunos');
+            var conteudo = "<table class='table'>";
+            conteudo += "<tr><th>Nome</th><th>Animal</th><th>Local</th></tr>"
+            for (i = 0; i< alunos.length; i++){
+                if (alunos[i].casa == casa){
+                    conteudo += "<tr><td>"+alunos[i].nome+"</td>";
+                    conteudo += "<td>"+alunos[i].animal+"</td>"; 
+                    conteudo += "<td>"+alunos[i].localAtual+"</td></tr>";
+                }
+            }
+            conteudo += "</table>";
+            divcasa.innerHTML = conteudo;
+        }
+    </script>
+
+    <ul class="nav nav-tabs">
+        <li><a href="#" onclick="event.preventDeufault(); listar('Portugal')">Portugal</a></li>
+        <li><a href="#" onclick="event.preventDeufault(); listar('Argentina')">Argentina</a></li>
+        <li><a href="#" onclick="event.preventDeufault(); listar('Brasil')">Brasil</a></li>
+        <li><a href="#" onclick="event.preventDeufault(); listar('Marrocos')">Marrocos</a></li>
+        <li><a href="#" onclick="event.preventDeufault(); listar('França')">França</a></li>
+        <li><a href="#" onclick="event.preventDeufault(); listar('Uruguai')">Uruguai</a></li>
+        <li><a href="#" onclick="event.preventDeufault(); listar('Chile')">Chile</a></li>
+    </ul>
+<div class="tab-content">
+    <div id="listaralunos" class="tab-pane active"></div>
+</div>
+                                               
+</body>
+
+</html>
